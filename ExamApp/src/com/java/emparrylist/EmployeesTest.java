@@ -46,6 +46,7 @@ public class EmployeesTest {
 		System.out.println("-- Reverse Direction --");
 		while (itr.hasPrevious()) {
 			System.out.println(itr.previous());
+			
 		}
 	}
 }
