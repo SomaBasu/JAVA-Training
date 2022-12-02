@@ -9,8 +9,8 @@ public class LambdaExpression {
 	public static void main(String[] args) {
 		PerformOperation isOdd = x-> x%2 != 0;	
 		
-		System.out.println("9 is Odd Number ? "+isOdd.operation(3));
-		System.out.println("10 is Even Number? "+isOdd.operation(8));		
+		System.out.println("9 is Odd Number ? "+isOdd.operation(9));
+		System.out.println("10 is Even Number? "+isOdd.operation(10));		
 		
 		PerformOperation isPrime = x-> {
 			boolean flag = false;
