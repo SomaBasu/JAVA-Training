@@ -1,0 +1,9 @@
+02-Dec-2022 09:44:48 INFO - testingEmployees [empId=1, empName=John, empSalary=1000.0]
+02-Dec-2022 09:44:48 INFO - testingEmployees [empId=2, empName=Mariana, empSalary=2000.0]
+02-Dec-2022 09:44:48 INFO - testingEmployees [empId=3, empName=Luke, empSalary=3000.0]
+02-Dec-2022 09:44:48 INFO - testingEmployees [empId=4, empName=Haide, empSalary=4000.0]
+02-Dec-2022 09:46:49 INFO - -- For --
+02-Dec-2022 09:46:49 INFO - Employees List: Employees [empId=1, empName=John, empSalary=1000.0]
+02-Dec-2022 09:46:49 INFO - Employees List: Employees [empId=2, empName=Mariana, empSalary=2000.0]
+02-Dec-2022 09:46:49 INFO - Employees List: Employees [empId=3, empName=Luke, empSalary=3000.0]
+02-Dec-2022 09:46:49 INFO - Employees List: Employees [empId=4, empName=Haide, empSalary=4000.0]

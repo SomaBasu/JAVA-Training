@@ -1,6 +1,5 @@
 package com.java.emparrylist;
 
-
 public class Employees implements Comparable<Employees> {
 	private Integer empId;
 	private String empName;
