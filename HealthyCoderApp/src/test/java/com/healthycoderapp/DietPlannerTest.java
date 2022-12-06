@@ -1,6 +1,8 @@
 package com.healthycoderapp;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,5 +39,11 @@ class DietPlannerTest {
 				() -> assertEquals(expected.getCarbohydrate(), actual.getCarbohydrate())
 		);
 	}
-
+	@Test
+	void should_RetunCorrectDietPlanner3{
+				
+				assertThrows(RuntimeException.class, () -> new DietPlanner(30,30,30));
+		
+	}
+	
 }

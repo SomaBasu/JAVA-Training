@@ -1,0 +1,5 @@
+
+06-Dec-2022 06:07:51 ERROR - ----The employee name is invalid.------
+java.lang.Exception: ----The employee name is invalid.------
+	at com.myapp.validator.Validator.validate(Validator.java:15) [classes/:?]
+	at com.myapp.Tester.main(Tester.java:12) [classes/:?]
