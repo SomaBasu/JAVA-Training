@@ -4,7 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.lang.reflect.Executable;
+
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -39,11 +42,34 @@ class DietPlannerTest {
 				() -> assertEquals(expected.getCarbohydrate(), actual.getCarbohydrate())
 		);
 	}
+	
 	@Test
-	void should_RetunCorrectDietPlanner3{
-				
-				assertThrows(RuntimeException.class, () -> new DietPlanner(30,30,30));
+	void should_Throw_Exception_When_Dietplanner_Notequal_Hundred(){
 		
+		int proteinPercentage = 10;
+		int fatPercentage = 20; 
+		int carbohydratePercentage = 30;			
+	
+		RuntimeException exception = Assertions.assertThrows(RuntimeException.class,()-> {new DietPlanner(proteinPercentage, fatPercentage, carbohydratePercentage); return; });
+		Assertions.assertEquals("protein, fat and carbohydrate percentages must add up to 100!", exception.getMessage());
+	}
+	
+	
+	@Test
+	void should_Calculate_BMR12(){
+		// given
+		Coder coder = new Coder(1.82, 75.0, 26, Gender.FEMALE);
+		DietPlan expected = new DietPlan(1918, 96, 64, 240);
+
+		// when
+		DietPlan actual = dietPlanner.calculateDiet(coder);
+
+		// then
+		assertAll(() -> assertEquals(expected.getCalories(), actual.getCalories()),
+				() -> assertEquals(expected.getProtein(), actual.getProtein()),
+				() -> assertEquals(expected.getFat(), actual.getFat()),
+				() -> assertEquals(expected.getCarbohydrate(), actual.getCarbohydrate())
+		);
 	}
 	
 }

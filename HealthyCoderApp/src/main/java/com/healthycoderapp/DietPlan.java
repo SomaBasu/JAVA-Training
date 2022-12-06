@@ -6,6 +6,10 @@ public class DietPlan {
 	private int fat;
 	private int carbohydrate;
 	
+	public DietPlan() {
+		super();
+	}
+	
 	public DietPlan(int calories, int protein, int fat, int carbohydrate) {
 		super();
 		this.calories = calories;
