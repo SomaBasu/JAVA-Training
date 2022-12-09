@@ -66,7 +66,8 @@ public class EmployeesConsole {
 	                + "values(?,?,?,?,?,?)";
 	        PreparedStatement pstmt = null;
 	        int rowset = 0;
-	       try (conn) {
+	        Connection mycon = this.connect();
+	       try (mycon) {
 	            pstmt = conn.prepareStatement(insertSqlQuery);
 	            pstmt.setInt(1, emp.getId());
 	            pstmt.setString(2, emp.getFirst_name());
