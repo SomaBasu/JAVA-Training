@@ -10,8 +10,8 @@ public class Exam {
        qns[0] = new Question("1", "What is a variable", "01", "02", "03", "04", 2);
        qns[1] = new Question("2", "What is a class", "01", "02", "03", "04", 1);
        qns[2] = new Question("3", "What is a function", "01", "02", "03", "04", 4);
-       qns[3] = new Question("4", "What is a method", "01", "02", "03", "04", 4);
-       qns[4] = new Question("5", "What is a inheritance", "01", "02", "03", "04", 3);
+       //qns[3] = new Question("4", "What is a method", "01", "02", "03", "04", 4);
+       //qns[4] = new Question("5", "What is a inheritance", "01", "02", "03", "04", 3);
 
        System.out.println("Welcome to Exam.Are you Ready(Y-Start ,N-Stop)");
         Scanner sc = new Scanner(System.in);
